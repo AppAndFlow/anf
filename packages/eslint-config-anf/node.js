@@ -10,6 +10,7 @@ const config = {
   rules: {
     'no-console': OFF,
     'no-param-reassign': [ERROR, { props: false }],
+    'require-yield': OFF, // Bug with async functions
   },
 };
 
