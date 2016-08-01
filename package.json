@@ -1,0 +1,30 @@
+{
+  "name": "anf",
+  "version": "0.1.0",
+  "description": "Utilities for App & Flow projects",
+  "main": "index.js",
+  "scripts": {
+    "publish": "lerna publish",
+    "lint": "eslint ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AppAndFlow/anf.git"
+  },
+  "keywords": [
+    "App",
+    "and",
+    "Flow"
+  ],
+  "author": "Janic Duplessis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AppAndFlow/anf/issues"
+  },
+  "homepage": "https://github.com/AppAndFlow/anf#readme",
+  "devDependencies": {
+    "eslint": "^3.2.0",
+    "eslint-config-anf": "^0.1.0",
+    "lerna": "2.0.0-beta.24"
+  }
+}
