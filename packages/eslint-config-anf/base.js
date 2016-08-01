@@ -31,6 +31,11 @@ module.exports = {
     'babel/object-curly-spacing': [WARN, 'always'],
     'babel/object-shorthand': WARN,
 
+    'flowtype/require-valid-file-annotation': [ERROR, 'always'],
+    'flowtype/space-after-type-colon': [WARN, 'always'],
+    'flowtype/space-before-type-colon': [WARN, 'never'],
+    'flowtype/use-flow-type': ERROR,
+
     // Use the babel version of these rules instead.
     'array-bracket-spacing': OFF,
     'arrow-parens': OFF,
