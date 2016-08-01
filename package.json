@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "publish": "lerna publish",
-    "lint": "eslint ./"
+    "lint": "eslint ./packages"
   },
   "repository": {
     "type": "git",

@@ -18,7 +18,7 @@ module.exports = {
     'no-underscore-dangle': OFF,
     'no-return-assign': OFF,
     'no-duplicate-imports': OFF,
-    'import/no-unresolved': [ERROR, { ignore: ['\.png$', '^!'] }],
+    'import/no-unresolved': [ERROR, { ignore: ['\.png$', '^!'] }], // eslint-disable-line no-useless-escape
     // Babel rules.
     'generator-star-spacing': OFF,
     'new-cap': OFF,
@@ -47,5 +47,5 @@ module.exports = {
     ReactClass: true,
     $Enum: true,
     $Shape: true,
-  }
+  },
 };
