@@ -27,6 +27,7 @@
     "deep-extend": "^0.4.1",
     "eslint-config-airbnb": "^5.0.0",
     "eslint-config-airbnb-base": "^5.0.0",
+    "eslint-plugin-babel": "^3.3.0",
     "eslint-plugin-flowtype": "^2.4.0",
     "eslint-plugin-import": "^1.12.0"
   }
