@@ -20,6 +20,7 @@ module.exports = {
     'no-return-assign': OFF,
     'no-underscore-dangle': OFF,
     'no-use-before-define': OFF,
+    'prefer-template': OFF,
 
     'babel/array-bracket-spacing': WARN,
     'babel/arrow-parens': OFF,
@@ -31,7 +32,7 @@ module.exports = {
     'babel/object-curly-spacing': [WARN, 'always'],
     'babel/object-shorthand': WARN,
 
-    'flowtype/require-valid-file-annotation': [ERROR, 'always'],
+    'flowtype/require-valid-file-annotation': OFF,
     'flowtype/space-after-type-colon': [WARN, 'always'],
     'flowtype/space-before-type-colon': [WARN, 'never'],
     'flowtype/use-flow-type': ERROR,

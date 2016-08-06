@@ -1,0 +1,29 @@
+{
+  "name": "anf-scripts",
+  "version": "0.1.0",
+  "description": "Various scripts used across App & Flow projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AppAndFlow/anf.git"
+  },
+  "keywords": [
+    "scripts",
+    "app",
+    "and",
+    "flow",
+    "anf"
+  ],
+  "bugs": {
+    "url": "https://github.com/AppAndFlow/anf/issues"
+  },
+  "homepage": "https://github.com/AppAndFlow/anf#readme",
+  "author": "Janic Duplessis",
+  "license": "MIT",
+  "dependencies": {
+    "shelljs": "^0.7.3"
+  }
+}
