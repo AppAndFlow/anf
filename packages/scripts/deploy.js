@@ -35,10 +35,11 @@ function deploy({
   safeExec(`docker push ${containerRepository}:latest`);
 
   echo('Updating service...');
-  safeExec(
+  exec(
     `docker run --rm -e AWS_ACCESS_KEY_ID=${accessKeyId} -e ` +
     `AWS_SECRET_ACCESS_KEY=${secretAccessKey} -e AWS_DEFAULT_REGION=${region} ` +
-    `silintl/ecs-deploy --cluster ${clusterName} --service-name ${serviceName} -i ${containerRepository}:latest`
+    `silintl/ecs-deploy --cluster ${clusterName} --service-name ${serviceName} ` +
+    `-i ${containerRepository}:latest --timeout 0`
   );
 }
 
