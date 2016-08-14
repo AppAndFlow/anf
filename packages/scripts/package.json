@@ -1,6 +1,6 @@
 {
   "name": "anf-scripts",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "description": "Various scripts used across App & Flow projects",
   "main": "index.js",
   "scripts": {
