@@ -10,6 +10,7 @@ const config = {
     'react/prefer-stateless-function': OFF,
     'react/sort-comp': OFF,
     'react/no-multi-comp': OFF,
+    'react/jsx-filename-extension': OFF,
     'jsx-a11y/img-has-alt': OFF,
   },
 };
