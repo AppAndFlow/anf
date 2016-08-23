@@ -13,10 +13,11 @@ module.exports = {
   ],
   rules: {
     'global-require': OFF,
-    'import/no-unresolved': [ERROR, { ignore: ['\.png$', '^!'] }], // eslint-disable-line no-useless-escape
     'linebreak-style': OFF,
     'max-len': [WARN, 120],
     'no-duplicate-imports': OFF,
+    'no-else-return': OFF,
+    'no-mixed-operators': OFF,
     'no-return-assign': OFF,
     'no-underscore-dangle': OFF,
     'no-use-before-define': OFF,
@@ -36,6 +37,10 @@ module.exports = {
     'flowtype/space-after-type-colon': [WARN, 'always'],
     'flowtype/space-before-type-colon': [WARN, 'never'],
     'flowtype/use-flow-type': ERROR,
+
+    'import/no-extraneous-dependencies': [1, { devDependencies: true }],
+    'import/no-unresolved': [ERROR, { ignore: ['\.png$', '^!'] }], // eslint-disable-line no-useless-escape
+    'import/prefer-default-export': OFF,
 
     // Use the babel version of these rules instead.
     'array-bracket-spacing': OFF,
