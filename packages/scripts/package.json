@@ -24,6 +24,7 @@
   "author": "Janic Duplessis",
   "license": "MIT",
   "dependencies": {
+    "aws-sdk": "^2.5.2",
     "shelljs": "^0.7.3"
   }
 }

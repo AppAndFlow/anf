@@ -1,5 +1,6 @@
 const shell = require('shelljs');
-const { exec, echo, exit } = shell;
+const AWS = require('aws-sdk');
+const { exec, echo, exit, env, cd } = shell;
 
 // Exec that exits on non 0 exit code.
 function safeExec(command, options) {
@@ -23,6 +24,12 @@ function deploy({
   secretAccessKey,
   region = 'us-west-2',
 }) {
+  AWS.config.update({ accessKeyId, secretAccessKey, region });
+  cd('C:\\Users\\janic\\Developer\\pikapik\\th3rdwave-api');
+  const commitSHA = env.CIRCLE_SHA1 || safeExec('git rev-parse HEAD').stdout.trim();
+
+  echo(`Deploying commit ${commitSHA}...`);
+
   echo('Loging in to docker registry...');
   const loginCmd = safeExec('aws ecr get-login', { silent: true }).stdout;
   safeExec(loginCmd);
@@ -31,16 +38,53 @@ function deploy({
   safeExec(`docker build -t ${containerName} .`);
 
   echo('Uploading docker image...');
-  safeExec(`docker tag ${containerName}:latest ${containerRepository}:latest`);
-  safeExec(`docker push ${containerRepository}:latest`);
+  safeExec(`docker tag ${containerName} ${containerRepository}:${commitSHA}`);
+  safeExec(`docker tag ${containerName} ${containerRepository}:latest`);
+  safeExec(`docker push ${containerRepository}`);
 
   echo('Updating service...');
-  exec(
-    `docker run --rm -e AWS_ACCESS_KEY_ID=${accessKeyId} -e ` +
-    `AWS_SECRET_ACCESS_KEY=${secretAccessKey} -e AWS_DEFAULT_REGION=${region} ` +
-    `silintl/ecs-deploy --cluster ${clusterName} --service-name ${serviceName} ` +
-    `-i ${containerRepository}:latest --timeout 0`
-  );
+
+  const ecs = new AWS.ECS();
+
+  ecs.describeServices({
+    cluster: clusterName,
+    services: [serviceName],
+  }).promise()
+    .then((data) => {
+      const taskDefinition = data.services[0].taskDefinition;
+      return ecs.describeTaskDefinition({
+        taskDefinition,
+      }).promise();
+    })
+    .then((data) => {
+      const { taskDefinition } = data;
+
+      return ecs.registerTaskDefinition({
+        containerDefinitions: taskDefinition.containerDefinitions.map(def => {
+          const newImage = `${def.image.split(':')[0]}:${commitSHA}`;
+          return Object.assign({}, def, { image: newImage });
+        }),
+        family: taskDefinition.family,
+        networkMode: taskDefinition.networkMode,
+        taskRoleArn: taskDefinition.taskRoleArn,
+        volumes: taskDefinition.volumes,
+      }).promise();
+    })
+    .then((data) => {
+      echo(`Created new revision ${data.taskDefinition.revision}.`);
+      return ecs.updateService({
+        service: serviceName,
+        cluster: clusterName,
+        taskDefinition: data.taskDefinition.taskDefinitionArn,
+      }).promise();
+    })
+    .then(() => {
+      echo('Service updated successfully.');
+    })
+    .catch((err) => {
+      echo(err);
+      exit(1);
+    });
 }
 
 module.exports = deploy;
