@@ -25,7 +25,6 @@ module.exports = {
 
     'babel/array-bracket-spacing': WARN,
     'babel/arrow-parens': OFF,
-    'babel/flow-object-type': WARN,
     'babel/func-params-comma-dangle': [OFF, 'always-multiline'],
     'babel/generator-star-spacing': WARN,
     'babel/new-cap': WARN,
@@ -45,6 +44,7 @@ module.exports = {
     'flowtype/no-weak-types': OFF,
     'flowtype/semi': WARN,
     'flowtype/space-before-generic-bracket': WARN,
+    'flowtype/union-intersection-spacing': WARN,
 
     'import/no-extraneous-dependencies': [1, { devDependencies: true }],
     'import/no-unresolved': [ERROR, { ignore: ['\.png$', '^!'] }], // eslint-disable-line no-useless-escape
