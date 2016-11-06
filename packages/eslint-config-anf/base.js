@@ -22,6 +22,11 @@ module.exports = {
     'no-underscore-dangle': OFF,
     'no-use-before-define': OFF,
     'prefer-template': OFF,
+    'no-restricted-syntax': [
+      ERROR,
+      'LabeledStatement',
+      'WithStatement',
+    ],
 
     'babel/array-bracket-spacing': WARN,
     'babel/arrow-parens': OFF,
