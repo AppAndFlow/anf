@@ -33,10 +33,18 @@ module.exports = {
     'babel/object-curly-spacing': [WARN, 'always'],
     'babel/object-shorthand': WARN,
 
-    'flowtype/require-valid-file-annotation': OFF,
+    'flowtype/require-valid-file-annotation': [ERROR, 'always'],
     'flowtype/space-after-type-colon': [WARN, 'always'],
     'flowtype/space-before-type-colon': [WARN, 'never'],
     'flowtype/use-flow-type': ERROR,
+    'flowtype/object-type-delimiter': [ERROR, 'comma'],
+    'flowtype/boolean-style': [ERROR, 'boolean'],
+    'flowtype/delimiter-dangle': [WARN, 'always-multiline'],
+    'flowtype/generic-spacing': [WARN, 'never'],
+    'flowtype/no-dupe-keys': ERROR,
+    'flowtype/no-weak-types': OFF,
+    'flowtype/semi': WARN,
+    'flowtype/space-before-generic-bracket': WARN,
 
     'import/no-extraneous-dependencies': [1, { devDependencies: true }],
     'import/no-unresolved': [ERROR, { ignore: ['\.png$', '^!'] }], // eslint-disable-line no-useless-escape
