@@ -30,14 +30,11 @@ module.exports = {
     'class-methods-use-this': OFF,
     'arrow-body-style': OFF,
 
-    'babel/array-bracket-spacing': WARN,
     'babel/arrow-parens': OFF,
     'babel/func-params-comma-dangle': [OFF, 'always-multiline'],
-    'babel/generator-star-spacing': WARN,
     'babel/new-cap': WARN,
     'babel/no-await-in-loop': WARN,
     'babel/object-curly-spacing': [WARN, 'always'],
-    'babel/object-shorthand': WARN,
 
     'flowtype/require-valid-file-annotation': [ERROR, 'always'],
     'flowtype/space-after-type-colon': [WARN, 'always'],
@@ -58,15 +55,12 @@ module.exports = {
     'import/prefer-default-export': OFF,
 
     // Use the babel version of these rules instead.
-    'array-bracket-spacing': OFF,
     'arrow-parens': OFF,
     'flow-object-type': OFF,
     'func-params-comma-dangle': OFF,
-    'generator-star-spacing': OFF,
     'new-cap': OFF,
     'no-await-in-loop': OFF,
     'object-curly-spacing': OFF,
-    'object-shorthand': OFF,
   },
   globals: {
     __DEV__: true,
