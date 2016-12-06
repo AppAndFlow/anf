@@ -11,7 +11,9 @@ const config = {
     'react/sort-comp': OFF,
     'react/no-multi-comp': OFF,
     'react/jsx-filename-extension': OFF,
+    'react/require-extension': OFF,
     'jsx-a11y/img-has-alt': OFF,
+    'jsx-a11y/no-static-element-interactions': OFF,
   },
 };
 

@@ -27,6 +27,7 @@ module.exports = {
       'LabeledStatement',
       'WithStatement',
     ],
+    'methods-use-this': OFF,
 
     'babel/array-bracket-spacing': WARN,
     'babel/arrow-parens': OFF,
