@@ -21,6 +21,7 @@ module.exports = {
     'no-underscore-dangle': OFF,
     'no-use-before-define': OFF,
     'prefer-template': OFF,
+    'no-await-in-loop': OFF,
     'no-param-reassign': [ERROR, { props: false }],
     'no-restricted-syntax': [
       ERROR,
@@ -35,7 +36,7 @@ module.exports = {
     'flowtype/require-valid-file-annotation': [ERROR, 'always'],
     'flowtype/use-flow-type': ERROR,
     'flowtype/boolean-style': [ERROR, 'boolean'],
-    'flowtype/no-dupe-keys': ERROR,
+    'flowtype/no-dupe-keys': OFF, // Bugged
     'flowtype/no-weak-types': OFF,
 
     'import/no-extraneous-dependencies': [1, { devDependencies: true }],
