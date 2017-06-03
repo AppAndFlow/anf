@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-anf",
-  "version": "0.4.4",
+  "version": "0.5.0",
   "description": "Eslint config for App & Flow projects",
   "main": "react.js",
   "scripts": {
