@@ -23,8 +23,8 @@
   },
   "homepage": "https://github.com/AppAndFlow/anf#readme",
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-config-anf": "^0.4.4",
-    "lerna": "2.0.0-rc.5"
+    "eslint": "^4.5.0",
+    "eslint-config-anf": "^0.5.1",
+    "lerna": "2.0.0"
   }
 }
