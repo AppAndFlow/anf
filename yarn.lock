@@ -701,32 +701,32 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-eslint-config-airbnb-base@^11.2.0, eslint-config-airbnb-base@^11.3.0:
+eslint-config-airbnb-base@^11.3.0, eslint-config-airbnb-base@^11.3.2:
   version "11.3.2"
   resolved "https://registry.yarnpkg.com/eslint-config-airbnb-base/-/eslint-config-airbnb-base-11.3.2.tgz#8703b11abe3c88ac7ec2b745b7fdf52e00ae680a"
   dependencies:
     eslint-restricted-globals "^0.1.1"
 
-eslint-config-airbnb@^15.0.1:
+eslint-config-airbnb@^15.1.0:
   version "15.1.0"
   resolved "https://registry.yarnpkg.com/eslint-config-airbnb/-/eslint-config-airbnb-15.1.0.tgz#fd432965a906e30139001ba830f58f73aeddae8e"
   dependencies:
     eslint-config-airbnb-base "^11.3.0"
 
-eslint-config-anf@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-anf/-/eslint-config-anf-0.5.1.tgz#2fc1be83971bfba21f3c79932dca344d2c5d6450"
+eslint-config-anf@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/eslint-config-anf/-/eslint-config-anf-0.5.2.tgz#9ced1aa24e98f437e31e415aa94dd89b40cab044"
   dependencies:
     babel-eslint "^7.2.3"
     deep-extend "^0.5.0"
-    eslint-config-airbnb "^15.0.1"
-    eslint-config-airbnb-base "^11.2.0"
+    eslint-config-airbnb "^15.1.0"
+    eslint-config-airbnb-base "^11.3.2"
     eslint-config-prettier "^2.1.1"
     eslint-plugin-babel "^4.1.1"
     eslint-plugin-flowtype "^2.34.0"
-    eslint-plugin-import "^2.3.0"
-    eslint-plugin-jsx-a11y "^5.0.3"
-    eslint-plugin-react "^7.0.1"
+    eslint-plugin-import "^2.7.0"
+    eslint-plugin-jsx-a11y "^5.1.1"
+    eslint-plugin-react "^7.3.0"
 
 eslint-config-prettier@^2.1.1:
   version "2.3.0"
@@ -758,7 +758,7 @@ eslint-plugin-flowtype@^2.34.0:
   dependencies:
     lodash "^4.15.0"
 
-eslint-plugin-import@^2.3.0:
+eslint-plugin-import@^2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.7.0.tgz#21de33380b9efb55f5ef6d2e210ec0e07e7fa69f"
   dependencies:
@@ -773,7 +773,7 @@ eslint-plugin-import@^2.3.0:
     minimatch "^3.0.3"
     read-pkg-up "^2.0.0"
 
-eslint-plugin-jsx-a11y@^5.0.3:
+eslint-plugin-jsx-a11y@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-5.1.1.tgz#5c96bb5186ca14e94db1095ff59b3e2bd94069b1"
   dependencies:
@@ -785,7 +785,7 @@ eslint-plugin-jsx-a11y@^5.0.3:
     emoji-regex "^6.1.0"
     jsx-ast-utils "^1.4.0"
 
-eslint-plugin-react@^7.0.1:
+eslint-plugin-react@^7.3.0:
   version "7.3.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.3.0.tgz#ca9368da36f733fbdc05718ae4e91f778f38e344"
   dependencies:
